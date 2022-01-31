@@ -16,6 +16,10 @@
 
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Images/searchsploit.png "searching exploit")
 
-- From the screenshot it looks like there is an exploit available apache mod_ssl v2.8.7 or a lower.
- 
+- From the screenshot it looks like there is an exploit available apache mod_ssl v2.8.7 or a lower remote buffer overflow. I will give this exploit a try. I copied the exploit "cp /usr/share/exploitdb/exploits/unix/remote/764.c" to another directory.
+
+- This exploit was quite difficult to run at the start, had to do a lot of googling because i kept running into errors when trying to compile it. 
+- First you need to download the ptrace-kmod.c, you can use wget to download.  "wget  https://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c" 
+- Reading the mod_ssl exploit File (764.c) it says to compile using syntax  "gcc -o OpenFuck OpenFuck.c -lcrypto". When trying to compile it will give you errors. You need to add these two lines of code at the top of "764.c" file.
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Images/fixing_exploit1.png)
 
