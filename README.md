@@ -24,9 +24,16 @@
 - Reading the mod_ssl exploit File (764.c) it says to compile using syntax  "gcc -o OpenFuck OpenFuck.c -lcrypto". When trying to compile it will give you errors. Before compiling again we need to make a few changes. First you need to add these two lines of code at the top of "764.c".
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Images/fixing_exploit1.png)
 - The exploit will also try to download the ptrace-kmod.c from the Internet. Since were running the Kioptrix machine on our home network we do not want it to have access to the internet. So instead the exploit will download the ptrace-kmod.c from our own attack machine (hence why we downloaded the ptrace-kmod.c at the start).
-- Replace this HTTP site with our own webserver. 
+- Replace this HTTP site with our own webserver. (We will use python to spin up a quick webserver to host our ptrace-kmod.c) 
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Images/replace.png)
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Images/fixing_exploit2.png)
-   
+
+### Running the exploit
+- Now we can compile our exploit. "gcc  -o  exploit  764.c  -lcrypto"
+- Trying to execute our new exploit will show instructions on proper syntax. It needs to know the apache version & operating system to use, along with the IP address, port, and -c 40-50.
+- Looking at the options our exploit syntax is  "./exploit 0x6b  10.0.2.9   443  -c 40"
+_____
+- Now we have full access to the machine, with root privileges   
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Images/root.png)
 
 
