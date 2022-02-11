@@ -12,7 +12,6 @@
 - Tried out a simple SQL auth bypass before i started diving into a more complicated SQL. Injection i tried `' OR 1=1 -- -` inside the username field, and password can be anything.
 
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/Screenshot_2022-02-10_21-35-37.png)
-
-![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/ping-screen.png) (https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/SQL.png)
-- 
+![alt text]((https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/SQL.png)
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/ping-screen.png) 
 
