@@ -20,4 +20,8 @@
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/ping_test.png)
 
 - So it looks like its using the OS ping command, which we can try to command stack using   `;  &&  ||`  to get a reverse shell
- 
+- Testing command stacking with the command `; id`
+- ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/id_test.png)
+
+- awesome we can command stack with a semi-colon. Lets see if bash binary is on the system.
+- [alt text]()
