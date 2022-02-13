@@ -19,6 +19,5 @@
 - Looks like we can ping our own machine   
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/ping_test.png)
 
-- So it looks like its using the OS ping command, which we can try to command stack using   `; && ||`
-to get a reverse shell
+- So it looks like its using the OS ping command, which we can try to command stack using   `;  &&  ||`  to get a reverse shell
  
