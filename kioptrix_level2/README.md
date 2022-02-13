@@ -16,8 +16,9 @@
 
 - Now theres a user input field and it says we can ping a machine on a network. So ill try to ping my attacker machine that im using.
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/ping-screen.png)
-- Looks like we can ping our own machine
+- Looks like we can ping our own machine   
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/ping_test.png)
 
 - So it looks like its using the OS ping command, which we can try to command stack using   `; && ||`
+to get a reverse shell
  
