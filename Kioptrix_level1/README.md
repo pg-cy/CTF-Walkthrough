@@ -29,7 +29,7 @@
 - To spin up a quick python webserver, be in the same folder as the ptrace-kmod.c file and use the command `python3 -m http.server 5555` In this case im using port 5555 on my attacker machine. use whatever port you want, just make sure its the same port in the file we just edited. 
 
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Kioptrix_level1/Images/replace.png) replace this
-![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Kioptrix_level1/Images/fixing_exploit2.png)
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Kioptrix_level1/Images/fixing_exploit2.png) this is our own webserver hosting the ptrace file
 
 ### Running the exploit
 - Now we can compile our exploit. "gcc  -o  exploit  764.c  -lcrypto"
