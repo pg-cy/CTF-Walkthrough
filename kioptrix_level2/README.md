@@ -36,4 +36,7 @@
 - Its running CentOS 4.5
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/OS.png)
 
+- Now i can use this info to narrow down my exploit search.
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/searchsploit.png)
+
 
