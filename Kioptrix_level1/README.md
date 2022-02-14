@@ -27,6 +27,7 @@
 - The exploit will also try to download the ptrace-kmod.c from the Internet. Since were running the Kioptrix machine on our home network we do not want it to have access to the internet. So instead the exploit will download the ptrace-kmod.c from our own attack machine (hence why we downloaded the ptrace-kmod.c at the start).
 - Replace this HTTP site seen below with our own webserver. (We will use python to spin up a quick webserver to host our ptrace-kmod.c)
 - To spin up a quick python webserver, be in the same folder as the ptrace-kmod.c file and use the command `python3 -m http.server 5555` In this case im using port 5555 on my attacker machine. use whatever port you want, just make sure its the same port in the file we just edited. 
+
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Kioptrix_level1/Images/replace.png) replace this
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Kioptrix_level1/Images/fixing_exploit2.png)
 
