@@ -32,5 +32,8 @@
 - I used searchsploit to search "kernel 2.6"....and there was a ton of exploits that poped up. I decided to see if i can find the OS to help me narrow it down.
 
 
-- `uname -a` was not much help, so i looked at 
+- `uname -a` was not much help to determine OS type. So i used the command `cat  /etc/*-release`. 
+- Its running CentOS 4.5
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/OS.png)
+
 
