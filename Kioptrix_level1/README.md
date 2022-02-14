@@ -22,6 +22,7 @@
 - This exploit was quite difficult to run at the start, had to do a lot of googling because i kept running into errors when trying to compile it. 
 - First you need to download the ptrace-kmod.c, you can use wget to download.  "wget  https://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c" 
 - Reading the mod_ssl exploit File (764.c) it says to compile using syntax  "gcc -o OpenFuck OpenFuck.c -lcrypto". When trying to compile it will give you errors. Before compiling again we need to make a few changes. First you need to add these two lines of code at the top of "764.c".
+
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Kioptrix_level1/Images/fixing_exploit1.png)
 - The exploit will also try to download the ptrace-kmod.c from the Internet. Since were running the Kioptrix machine on our home network we do not want it to have access to the internet. So instead the exploit will download the ptrace-kmod.c from our own attack machine (hence why we downloaded the ptrace-kmod.c at the start).
 - Replace this HTTP site with our own webserver. (We will use python to spin up a quick webserver to host our ptrace-kmod.c) 
