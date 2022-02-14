@@ -51,5 +51,6 @@
 - Now the exploit is downloaded on the victims machine compile it `gcc 9542.c`
 - It will produce another file called "a.out"
 - Now all we have to do is execute the file and hope it gives us root. `./a.out`
+
 ![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/kioptrix_level2/Images/getting_root.png)
 - WOOoooooOOOoo! we got root!.
