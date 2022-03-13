@@ -22,7 +22,8 @@
 - A lot of what i tried was filtered: python, nc, perl, bash...
 - So i searched online to find command injection bypasses. I came across this really great github page for bypassing command injection filters. https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection
 - I then tried `l's'` to see if i can bypass the filter.
-![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/THM_chill_hack/images/ls.png)
+
+
 - WOOOO SUCCESS!, was able to execute it.
 - I tried the bypass with the "which" command to see what binaries i can use to get a reverse shell but wierdly it wouldnt work? not sure why, luckily i found a workaround using echo and command expansion.
 - `echo $(ls /usr/bin | grep python)` I tried to see if python was available first, and theres "python3" available
