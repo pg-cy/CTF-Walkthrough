@@ -3,7 +3,7 @@
 
 ###  Initial Scan
 - We can see from the port scan theres a webserver on port 80 and ssh on port 22. Ill start directory scanning while browsing the webserver
-![alt text](https://github.com/pg-cy/CTF-Walkthrough/tree/main/THM_Lazy_admin/images/nmap.png)
+![alt text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/THM_Lazy_admin/images/nmap.png)
 
 ### Directory scanning webserver
 ![alt text](https://github.com/pg-cy/lazy_admin/images/webdirectory.png)
