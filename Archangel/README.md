@@ -1,8 +1,8 @@
-# Archangel Room
+# Archangel Room - TryHackMe
 
 
 ### Initial Port-scan
-![alt-text]()
+![alt-text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Archangel/images/nmap.png)
 
 - There is a webserver on port 80, so ill directory bruteforce to see if i can find anything interesting.
 
